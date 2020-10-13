@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tong 20 so dau tien trong fibonacci</title>
+</head>
+<body>
+<script>
+    function fibonacci(n) {
+        f1 = 0;
+        f2 = 0;
+        fn = 1;
+        if (n < 0) {
+            return -1;
+        } else if (n == 1 || n == 2) {
+            return 1;
+        } else {
+            for (fi = 2; fi < n; fi++) {
+                f1 = f2;
+                f2 = fn;
+                fn = f2 + f1;
+            }
+        }
+        return fn;
+    }
+        for (fi = 0; fi < 22; fi++) {
+            if (fibonacci(fi) % 5 == 0) {
+                document.write(fibonacci(fi), "<br/>");
+            }
+        }
+</script>
+</body>
+</html>
